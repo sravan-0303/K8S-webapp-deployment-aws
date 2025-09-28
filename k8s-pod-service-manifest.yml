@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: webapp
+  namespace: sravan-ns
+  labels:
+    app: sravanwebapp
+spec:
+  containers:
+    - name: webappcontainers
+      image: hacker123shiva/springbt-in-docker:latest
+      ports:
+        - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webappsvc
+  namespace: sravan-ns
+spec:
+  type: LoadBalancer
+  selector:
+    app: sravanwebapp
+  ports:
+    - port: 80                                                   # can access here
+      targetPort: 8080                                           # my app lies here
+
+...
+
