@@ -1,14 +1,14 @@
-============================
+
 Kubernetes Web Application Practicals
-============================
+
 
 This repository contains Kubernetes manifests to deploy a web application.
 
 ---
 
-============================
+
 1. Pod Manifest
-============================
+
 
 Overview:
 Deploys a single pod running the web application.
@@ -34,9 +34,9 @@ $ kubectl logs <pod-name>
 
 ---
 
-============================
+
 2. Service Manifest
-============================
+
 
 Overview:
 Exposes the web application pod internally or externally using a Service.
@@ -63,9 +63,9 @@ $ kubectl get svc
 
 ---
 
-============================
-3. Namespace (Optional)
-============================
+
+3. Namespace 
+
 
 Overview:
 Organizes resources under a specific namespace.
